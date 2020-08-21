@@ -47,7 +47,7 @@ Resources:
   ECSCluster:
     Type: AWS::ECS::Cluster
     Properties:
-      ClusterName: ECSCluster
+      ClusterName: Cactus-ECS-Cluster
 
   MyPrivateDnsNamespace:
     Type: "AWS::ServiceDiscovery::PrivateDnsNamespace"
@@ -63,7 +63,7 @@ Resources:
       EnableDnsHostnames: 'true'
       Tags:
         - Key: Name
-          Value: ECS VPC
+          Value: Cactus ECS VPC
 
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
@@ -152,7 +152,7 @@ Resources:
       VpcId: !Ref VPC
       Tags:
         - Key: Name
-          Value: MySecurityGroup
+          Value: Cactus-ecs-sg
 
       SecurityGroupEgress:
         - IpProtocol: tcp
@@ -173,7 +173,7 @@ Resources:
     DependsOn: EcsInstanceLaunchConfiguration
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
-      AutoScalingGroupName: MyAutoScallingGroup
+      AutoScalingGroupName: CactusECSasg
       AvailabilityZones:
       - Fn::Select:
         - '0'
@@ -199,7 +199,7 @@ Resources:
       - SecondEIP
     Properties:
       Type: network
-      Name: MyLoadBalancer
+      Name: CactusLoadBalancer
       SubnetMappings:
         - AllocationId: !GetAtt
             - FirstEIP
@@ -238,7 +238,7 @@ Resources:
   myTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
-      Name: myTargetGroup
+      Name: CactusEcsTargetGroup
       Port: 80
       Protocol: TCP
       TargetType: instance
