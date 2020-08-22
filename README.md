@@ -104,3 +104,34 @@ No input.
 | subnet1-id | n/a |
 | subnet2-id | n/a |
 
+
+## Directory structure
+
+ecs-application
+├── README.md
+├── ec2
+│   ├── autoscaling-group.tf
+│   ├── elastic-load-balancer.tf
+│   ├── launch-configuration.tf
+│   ├── user-data.tpl
+│   └── variable.tf
+├── ecs
+│   ├── cluster.tf
+│   ├── service.tf
+│   ├── task-definition.json
+│   ├── task-definition.tf
+│   └── variables.tf
+├── graph.svg
+├── iam
+│   ├── ecs-instance-profile.tf
+│   ├── ecs-instance-role.tf
+│   └── ecs-service-role.tf
+├── main.tf
+├── variable.tf
+└── vpc
+    ├── internet-gateway.tf
+    ├── network-acl.tf
+    ├── route-table.tf
+    ├── security-group.tf
+    ├── subnet.tf
+    └── vpc.tf
