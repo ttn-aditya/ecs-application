@@ -107,7 +107,7 @@ No input.
 
 ## Directory structure
 
-ecs-application
+|ecs-application
 ├── README.md
 ├── ec2
 │   ├── autoscaling-group.tf
