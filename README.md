@@ -106,7 +106,7 @@ No input.
 
 
 ## Directory structure
-
+```
 [34;42m.[00m
 ├── [01;32mREADME.md[00m
 ├── [34;42mec2[00m
@@ -138,3 +138,4 @@ No input.
     └── [01;32mvpc.tf[00m
 
 4 directories, 24 files
+```
