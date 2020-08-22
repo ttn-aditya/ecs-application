@@ -186,8 +186,8 @@ Resources:
       LaunchConfigurationName:
         Ref: "EcsInstanceLaunchConfiguration"
       MinSize: '1'
-      MaxSize: 1
-      DesiredCapacity: 1
+      MaxSize: 3
+      DesiredCapacity: 2
       VPCZoneIdentifier:
         - !Ref PublicSubnet1
         - !Ref PublicSubnet2
