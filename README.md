@@ -107,35 +107,33 @@ No input.
 
 ## Directory structure
 ```
-[34;42m.[00m
-├── [01;32mREADME.md[00m
-├── [34;42mec2[00m
-│   ├── [01;32mautoscaling-group.tf[00m
-│   ├── [01;32melastic-load-balancer.tf[00m
-│   ├── [01;32mlaunch-configuration.tf[00m
-│   ├── [01;32muser-data.tpl[00m
-│   └── [01;32mvariable.tf[00m
-├── [34;42mecs[00m
-│   ├── [01;32mcluster.tf[00m
-│   ├── [01;32mservice.tf[00m
-│   ├── [01;32mtask-definition.json[00m
-│   ├── [01;32mtask-definition.tf[00m
-│   └── [01;32mvariables.tf[00m
-├── [01;32mgraph.svg[00m
-├── [34;42miam[00m
-│   ├── [01;32mecs-instance-profile.tf[00m
-│   ├── [01;32mecs-instance-role.tf[00m
-│   └── [01;32mecs-service-role.tf[00m
-├── [01;32mmain.tf[00m
-├── [01;32mmy.md[00m
-├── [01;32mvariable.tf[00m
-└── [34;42mvpc[00m
-    ├── [01;32minternet-gateway.tf[00m
-    ├── [01;32mnetwork-acl.tf[00m
-    ├── [01;32mroute-table.tf[00m
-    ├── [01;32msecurity-group.tf[00m
-    ├── [01;32msubnet.tf[00m
-    └── [01;32mvpc.tf[00m
-
+.
+├── README.md
+├── ec2
+│   ├── autoscaling-group.tf
+│   ├── elastic-load-balancer.tf
+│   ├── launch-configuration.tf
+│   ├── user-data.tpl
+│   └── variable.tf
+├── ecs
+│   ├── cluster.tf
+│   ├── service.tf
+│   ├── task-definition.json
+│   ├── task-definition.tf
+│   └── variables.tf
+├── graph.svg
+├── iam
+│   ├── ecs-instance-profile.tf
+│   ├── ecs-instance-role.tf
+│   └── ecs-service-role.tf
+├── main.tf
+├── variable.tf
+└── vpc
+    ├── internet-gateway.tf
+    ├── network-acl.tf
+    ├── route-table.tf
+    ├── security-group.tf
+    ├── subnet.tf
+    └── vpc.tf
 4 directories, 24 files
 ```
